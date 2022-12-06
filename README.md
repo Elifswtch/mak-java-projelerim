@@ -1,0 +1,1 @@
+# mak-java-projelerim

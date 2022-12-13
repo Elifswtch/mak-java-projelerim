@@ -1,0 +1,35 @@
+package odev;
+import java.util.Scanner;
+public class arrayOrtalama {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("lütfen dizinin eleman sayısını giriniz");
+        int n = input.nextInt();
+        int[] array = new int[n];
+        
+        for (int i=0; i<n; i++) {
+            System.out.println("dizinin "+(i+1)+" inci elemanını giriniz"); 
+            int a = input.nextInt();
+            array[i] = a;
+        }
+        
+        int t =0, c =1;
+        double ht = 0, t2=0;
+        for (int i = 0; i < n; i++) {
+            t+= array[i];
+            c+= array[i];
+            ht+= 1/ array[i];
+            t2+= Math.pow(array[i],2);
+        }   
+        double AO=t/n;
+        double GO=Math.pow(c,1/n);
+        double HO=n/ht;
+        double KHO= t2/t;
+        
+        System.out.println("dizinin aritmetik ortalaması: "+AO);
+        System.out.println("dizinin geometrik ortalaması: "+GO);
+        System.out.println("dizinin harmonik ortalaması: "+HO);
+        System.out.println("dizinin kontraharmonik ortalaması: "+KHO);
+    }
+    
+}

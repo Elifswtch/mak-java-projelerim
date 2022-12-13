@@ -1,0 +1,24 @@
+package odev;
+import java.util.Scanner;
+public class arrayPolinom {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Lütfen dizinin eleman sayısını giriniz");
+        int n = input.nextInt();
+        int[] array = new int[n];
+        for (int i=0; i<n; i++) {
+            System.out.println("dizinin "+(i+1)+"inci eleman değerini giriniz");
+            int b = input.nextInt();
+            array[i] = b;
+        } 
+        System.out.println("elemanlarını girmiş olduğunuz dizi ile oluşturmuş olduğunuz polinom fonksiyonunun "+" a değerini atayınız. ");
+        int a = input.nextInt();
+        int pol = 0;
+        for (int i=0; i<n; i++) {
+            pol += (int) (array[i]*Math.pow(a,i));
+        }   
+         System.out.println("polinomunuzun sonucu: "+pol);   
+        
+    }
+    
+}
